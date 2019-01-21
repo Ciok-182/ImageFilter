@@ -12,6 +12,7 @@
 		CFAE291021F6391A0008F763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAE290E21F6391A0008F763 /* Main.storyboard */; };
 		CFAE291221F6391B0008F763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAE291121F6391B0008F763 /* Assets.xcassets */; };
 		CFAE291521F6391B0008F763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAE291321F6391B0008F763 /* LaunchScreen.storyboard */; };
+		CFAE291D21F68A650008F763 /* RGBAimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE291C21F68A650008F763 /* RGBAimage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CFAE291121F6391B0008F763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFAE291421F6391B0008F763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFAE291621F6391B0008F763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFAE291C21F68A650008F763 /* RGBAimage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAimage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				CFAE290A21F6391A0008F763 /* AppDelegate.swift */,
 				CFAE290C21F6391A0008F763 /* ViewController.swift */,
+				CFAE291C21F68A650008F763 /* RGBAimage.swift */,
 				CFAE290E21F6391A0008F763 /* Main.storyboard */,
 				CFAE291121F6391B0008F763 /* Assets.xcassets */,
 				CFAE291321F6391B0008F763 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				CFAE290D21F6391A0008F763 /* ViewController.swift in Sources */,
 				CFAE290B21F6391A0008F763 /* AppDelegate.swift in Sources */,
+				CFAE291D21F68A650008F763 /* RGBAimage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
