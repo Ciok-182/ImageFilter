@@ -23,11 +23,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fe-CL-Xou">
+                                <rect key="frame" x="119" y="473" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show filtered image"/>
+                                <connections>
+                                    <action selector="onImageToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E6I-Xe-OzD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imageToggle" destination="2Fe-CL-Xou" id="5dQ-cz-qfx"/>
                         <outlet property="imageView" destination="dP4-ys-DYR" id="HOx-9K-1UW"/>
                     </connections>
                 </viewController>

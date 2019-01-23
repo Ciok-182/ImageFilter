@@ -10,11 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    var filteredImage: UIImage?
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageToggle: UIButton!
+    
+    @IBAction func onImageToggle(_ sender: UIButton) {
+        
+        if(imageToggle.isSelected){
+            let image = UIImage(named: "sampleImage.png")
+            imageView.image = image
+            imageToggle.isSelected = false
+        } else{
+            imageView.image = filteredImage
+            imageToggle.isSelected = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageToggle.setTitle("Show before image", for: .selected)
         
         let image = UIImage(named: "sampleImage.png")
         let myRGBA = RGBAImage(image: image!)!
@@ -43,9 +59,7 @@ class ViewController: UIViewController {
                 
             }
         }
-        let result = myRGBA.toUIImage()
-        imageView.image = result
-        print("Terminado!!")
+        filteredImage = myRGBA.toUIImage()
     }
 
 
