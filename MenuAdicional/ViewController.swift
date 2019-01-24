@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
-        secondaryMenu.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        secondaryMenu.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         
         
         imageToggle.setTitle("Show before image", for: .selected)
@@ -95,10 +95,23 @@ class ViewController: UIViewController {
         let heightConstraint = secondaryMenu.heightAnchor.constraint(equalToConstant: 44)
         NSLayoutConstraint.activate([bottomConstraint,leftConstraint,rightConstraint,heightConstraint])
         view.layoutIfNeeded()
+        
+        self.secondaryMenu.alpha = 0
+        UIView.animate(withDuration: 0.4, animations: {
+            
+            self.secondaryMenu.alpha = 1
+        })
     }
     
     func hideSecondaryMenu(){
-        secondaryMenu.removeFromSuperview()
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.secondaryMenu.alpha = 0
+        }) { completed in
+            if completed == true{
+                self.secondaryMenu.removeFromSuperview()
+            }
+        }
     }
 
 }
