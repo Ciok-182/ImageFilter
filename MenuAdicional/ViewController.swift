@@ -37,6 +37,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
+        secondaryMenu.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        
+        
         imageToggle.setTitle("Show before image", for: .selected)
         
         let image = UIImage(named: "sampleImage.png")
@@ -70,11 +74,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onFilter(_ sender: UIButton) {
-        view.addSubview(secondaryMenu)
+        
+        if(sender.isSelected){
+            hideSecondaryMenu()
+            sender.isSelected = false
+        }else{
+            showSecondaryMenu()
+            sender.isSelected = true
+        }
+       
         
     }
     
+    func showSecondaryMenu(){
+        
+        view.addSubview(secondaryMenu)
+        let bottomConstraint = secondaryMenu.bottomAnchor.constraint(equalTo: bottomMenu.topAnchor)
+        let leftConstraint = secondaryMenu.leftAnchor.constraint(equalTo: view.leftAnchor)
+        let rightConstraint = secondaryMenu.rightAnchor.constraint(equalTo: view.rightAnchor)
+        let heightConstraint = secondaryMenu.heightAnchor.constraint(equalToConstant: 44)
+        NSLayoutConstraint.activate([bottomConstraint,leftConstraint,rightConstraint,heightConstraint])
+        view.layoutIfNeeded()
+    }
     
+    func hideSecondaryMenu(){
+        secondaryMenu.removeFromSuperview()
+    }
 
 }
 
