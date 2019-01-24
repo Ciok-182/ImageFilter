@@ -38,6 +38,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q27-TS-OvN">
                                                 <rect key="frame" x="94" y="0.0" width="93.5" height="44"/>
                                                 <state key="normal" title="Filter"/>
+                                                <connections>
+                                                    <action selector="onFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rB-Hl-ZoM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65M-px-InX">
                                                 <rect key="frame" x="187.5" y="0.0" width="94" height="44"/>
@@ -73,8 +76,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomMenu" destination="ieA-qu-Pu0" id="RLy-pF-bib"/>
+                        <outlet property="filterButton" destination="Q27-TS-OvN" id="p5Z-fT-L1f"/>
                         <outlet property="imageToggle" destination="2Fe-CL-Xou" id="5dQ-cz-qfx"/>
                         <outlet property="imageView" destination="dP4-ys-DYR" id="HOx-9K-1UW"/>
+                        <outlet property="secondaryMenu" destination="Dho-Du-Luv" id="zOU-6s-zbS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

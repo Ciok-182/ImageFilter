@@ -12,7 +12,14 @@ class ViewController: UIViewController {
 
     var filteredImage: UIImage?
     
+    @IBOutlet weak var bottomMenu: UIView!
+    @IBOutlet var secondaryMenu: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var filterButton: UIButton!
+    
+    
+    
     @IBOutlet weak var imageToggle: UIButton!
     
     @IBAction func onImageToggle(_ sender: UIButton) {
@@ -62,6 +69,12 @@ class ViewController: UIViewController {
         filteredImage = myRGBA.toUIImage()
     }
 
+    @IBAction func onFilter(_ sender: UIButton) {
+        view.addSubview(secondaryMenu)
+        
+    }
+    
+    
 
 }
 
