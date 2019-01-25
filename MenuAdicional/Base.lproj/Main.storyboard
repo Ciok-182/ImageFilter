@@ -49,6 +49,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dj2-Tn-ieP">
                                                 <rect key="frame" x="281.5" y="0.0" width="93.5" height="44"/>
                                                 <state key="normal" title="Share"/>
+                                                <connections>
+                                                    <action selector="onShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cX-qf-oEa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

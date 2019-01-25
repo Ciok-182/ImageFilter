@@ -110,14 +110,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 pixel.R = UInt8(max(min(255,Int(round(Double(avgRed) + modifier * Double(redDiff)))),0))
                 myRGBA.pixels[index] = pixel
-                
-                
             }
         }
-        
         filteredImage = myRGBA.toUIImage()
     }
 
+    @IBAction func onShare(_ sender: UIButton) {
+        let activityController = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+        
+        self.present(activityController, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func onFilter(_ sender: UIButton) {
         
         if(sender.isSelected){
@@ -130,6 +134,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        
         
     }
+    
+    
     
     func showSecondaryMenu(){
         
