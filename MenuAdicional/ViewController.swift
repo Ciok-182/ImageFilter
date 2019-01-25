@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var filteredImage: UIImage?
     
@@ -19,19 +19,63 @@ class ViewController: UIViewController {
     @IBOutlet weak var filterButton: UIButton!
     
     
+    @IBAction func onNewPhoto(_ sender: UIButton) {
+        
+        let actionSheet = UIAlertController.init(title: "New photo", message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction.init(title: "Camera", style: .default,
+                                                 handler: {action in
+                                                    self.showCamara()
+        }))
+        
+        actionSheet.addAction(UIAlertAction.init(title: "Album", style: .default,
+                                                 handler: {action in
+                                                    self.showAlbum()
+        }))
+        
+        actionSheet.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true, completion: nil)
     
-    @IBOutlet weak var imageToggle: UIButton!
+    }
+    
+    func showCamara(){
+        let camaraPicker = UIImagePickerController()
+        camaraPicker.delegate = self
+        camaraPicker.sourceType = .camera
+        self.present(camaraPicker, animated: true, completion: nil)
+        
+    }
+    
+    func showAlbum(){
+        let camaraPicker = UIImagePickerController()
+        camaraPicker.delegate = self
+        camaraPicker.sourceType = .photoLibrary
+        self.present(camaraPicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.image = image
+        }
+        
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func onImageToggle(_ sender: UIButton) {
         
-        if(imageToggle.isSelected){
-            let image = UIImage(named: "sampleImage.png")
-            imageView.image = image
-            imageToggle.isSelected = false
-        } else{
-            imageView.image = filteredImage
-            imageToggle.isSelected = true
-        }
+//        if(imageToggle.isSelected){
+//            let image = UIImage(named: "sampleImage.png")
+//            imageView.image = image
+//            imageToggle.isSelected = false
+//        } else{
+//            imageView.image = filteredImage
+//            imageToggle.isSelected = true
+//        }
     }
     
     override func viewDidLoad() {
@@ -41,7 +85,7 @@ class ViewController: UIViewController {
         secondaryMenu.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         
         
-        imageToggle.setTitle("Show before image", for: .selected)
+//        imageToggle.setTitle("Show before image", for: .selected)
         
         let image = UIImage(named: "sampleImage.png")
         let myRGBA = RGBAImage(image: image!)!
@@ -70,6 +114,7 @@ class ViewController: UIViewController {
                 
             }
         }
+        
         filteredImage = myRGBA.toUIImage()
     }
 
@@ -113,6 +158,8 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
 
 }
 
