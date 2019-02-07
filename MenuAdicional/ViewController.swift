@@ -131,10 +131,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             showSecondaryMenu()
             sender.isSelected = true
         }
-       
-        
     }
-    
     
     
     func showSecondaryMenu(){
