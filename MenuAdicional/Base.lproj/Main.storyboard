@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5x-OY-2tT">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.20000000000000001" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="L5x-OY-2tT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="dP4-ys-DYR">
@@ -33,6 +33,9 @@
                                     <constraint firstAttribute="trailing" secondItem="dP4-ys-DYR" secondAttribute="trailing" id="AIv-tn-bpx"/>
                                     <constraint firstItem="dP4-ys-DYR" firstAttribute="leading" secondItem="L5x-OY-2tT" secondAttribute="leading" id="p5p-bi-RNW"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5dW-bH-uNG"/>
+                                </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieA-qu-Pu0">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
 
     var filteredImage: UIImage?
     
@@ -160,6 +160,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.secondaryMenu.removeFromSuperview()
             }
         }
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
     }
     
     
