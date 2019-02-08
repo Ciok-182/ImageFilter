@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomMenu: UIView!
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var filterButton: UIButton!
     
@@ -77,6 +78,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //            imageToggle.isSelected = true
 //        }
     }
+    @IBOutlet var zoomTapGesture: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,8 +86,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
         secondaryMenu.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         
+        zoomTapGesture.numberOfTapsRequired = 2
         
-//        imageToggle.setTitle("Show before image", for: .selected)
+
         
         let image = UIImage(named: "sampleImage.png")
         let myRGBA = RGBAImage(image: image!)!
@@ -166,6 +169,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return imageView
     }
     
+    @IBAction func onTapZoom(_ sender: UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.scrollView.zoomScale = 1.5 * self.scrollView.zoomScale
+        })
+        
+    }
     
 
 }

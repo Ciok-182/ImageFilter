@@ -24,6 +24,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="dP4-ys-DYR">
                                         <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,6 +36,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="5dW-bH-uNG"/>
+                                    <outletCollection property="gestureRecognizers" destination="CpB-tg-6S1" appends="YES" id="SQH-Oi-ZXT"/>
                                 </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieA-qu-Pu0">
@@ -97,7 +99,9 @@
                         <outlet property="bottomMenu" destination="ieA-qu-Pu0" id="RLy-pF-bib"/>
                         <outlet property="filterButton" destination="Q27-TS-OvN" id="p5Z-fT-L1f"/>
                         <outlet property="imageView" destination="dP4-ys-DYR" id="HOx-9K-1UW"/>
+                        <outlet property="scrollView" destination="L5x-OY-2tT" id="tIh-UG-s54"/>
                         <outlet property="secondaryMenu" destination="Dho-Du-Luv" id="zOU-6s-zbS"/>
+                        <outlet property="zoomTapGesture" destination="CpB-tg-6S1" id="wOM-Z8-Zi1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -140,6 +144,11 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="Oce-bF-pu8"/>
                 </view>
+                <tapGestureRecognizer id="CpB-tg-6S1">
+                    <connections>
+                        <action selector="onTapZoom:" destination="BYZ-38-t0r" id="Dn0-Mz-ihz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
