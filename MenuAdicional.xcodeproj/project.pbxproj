@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF394CCE220DFB88005E9ABD /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF394CCD220DFB88005E9ABD /* PhotoView.swift */; };
 		CF4475BE21FA849400B94A86 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4475BD21FA849400B94A86 /* TableViewController.swift */; };
 		CFAE290B21F6391A0008F763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE290A21F6391A0008F763 /* AppDelegate.swift */; };
 		CFAE290D21F6391A0008F763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE290C21F6391A0008F763 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF394CCD220DFB88005E9ABD /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		CF4475BD21FA849400B94A86 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CFAE290721F6391A0008F763 /* MenuAdicional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuAdicional.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAE290A21F6391A0008F763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				CFAE290A21F6391A0008F763 /* AppDelegate.swift */,
 				CFAE290C21F6391A0008F763 /* ViewController.swift */,
 				CF4475BD21FA849400B94A86 /* TableViewController.swift */,
+				CF394CCD220DFB88005E9ABD /* PhotoView.swift */,
 				CFAE291C21F68A650008F763 /* RGBAimage.swift */,
 				CFAE290E21F6391A0008F763 /* Main.storyboard */,
 				CFAE291121F6391B0008F763 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				CFAE290D21F6391A0008F763 /* ViewController.swift in Sources */,
 				CFAE290B21F6391A0008F763 /* AppDelegate.swift in Sources */,
 				CFAE291D21F68A650008F763 /* RGBAimage.swift in Sources */,
+				CF394CCE220DFB88005E9ABD /* PhotoView.swift in Sources */,
 				CF4475BE21FA849400B94A86 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
